@@ -1,22 +1,17 @@
 # Run:
-# roslaunch turtlebot3_gazebo turtlebot3_world.launch
-# roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
+# ros2 launch turtlebot4_gz_bringup turtlebot4_gz.launch.py model:=lite 
 
 { pkgs ? import ../. {} }:
 with pkgs;
-with rosPackages.noetic;
+with rosPackages.jazzy;
 with pythonPackages;
 
 mkShell {
   buildInputs = [
     glibcLocales
     (buildEnv { paths = [
-      rosbash
-      turtlebot3-description
-      turtlebot3-teleop
-      turtlebot3-gazebo
-      gazebo-plugins
-      xacro
+      ros-base
+      turtlebot4-gz-bringup
     ]; })
   ];
 

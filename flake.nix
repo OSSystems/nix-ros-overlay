@@ -18,7 +18,7 @@
       legacyPackages = pkgs.rosPackages;
 
       devShells = {
-        example-turtlebot3-gazebo = import ./examples/turtlebot3-gazebo.nix { inherit pkgs; };
+        example-turtlebot4-gz = import ./examples/turtlebot4-gz.nix { inherit pkgs; };
         example-ros2-basic = import ./examples/ros2-basic.nix { inherit pkgs; };
         example-ros2-gz = import ./examples/ros2-gz.nix { inherit pkgs; };
 
